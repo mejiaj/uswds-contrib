@@ -28,6 +28,10 @@ As a dev, you'll mostly be working in:
   Occasionally you'll need to pull and review the Sketch file to make sure
   everything syncs up with component development.
 
+### Sprint board
+Work is tracked on this [board](https://github.com/orgs/uswds/projects/1).
+Remember to update your issues/PR's to accurately display the status of your work.
+
 ## The framework (USWDS)
 
 Where things live and what they are.
@@ -325,7 +329,7 @@ The workflow:
 - [ ] [Create settings](https://github.com/uswds/uswds/pull/3451/commits/8a61cb6d78142ef768638ea84538ac25054d4237)
 - [ ] [Cleanup and finalize](https://github.com/uswds/uswds/pull/3488)
 - [ ] [Add documentation](https://github.com/uswds/uswds-site/pull/967)
-- Merge USWDS PR into develop and prep for release
+- [ ] Merge USWDS PR into develop and prep for release
 
 When you're ready to merge in the component into develop you need to make sure
 you've done a few things.
