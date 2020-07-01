@@ -19,16 +19,12 @@ As a dev, you'll mostly be working in:
 
   Helps dev get set up locally to compile and use the framework. In case they don't have a local build system or don't want to be bothered creating one.
 
-- [USWDS Sandbox](https://github.com/uswds/uswds-sandbox)
-
-  Imagine a "dev" version of USWDS-Site. Here you can test out potential breaking features.
-
 - [USWDS for Designers](https://github.com/uswds/uswds-for-designers)
 
   Occasionally you'll need to pull and review the Sketch file to make sure everything syncs up with component development.
 
 
-## The actual framework
+## The framework (USWDS)
 
 Where things live and what they are.
 
@@ -73,12 +69,18 @@ Holds the gulp tasks that `gulpfile.js` consumes. Also has a `nycrc.yml` file, b
 #### docs
 Holds who is using uswds, but this seems to be outdated and no longer maintained.
 
+> We should update this directory to give users the best possible documentation.
+
 #### examples
 How USWDS lives alongside other tech. There's an existing [angular](https://github.com/uswds/uswds/issues/3341) setup that might be worth importing.
+
+> Also needs updating.
 
 #### spec
 
 Most things related to testing. Our unit tests, visual regression screenshots, and accessibility testing, and our setup for a headless chrome instance live here.
+
+> We should organize this.
 
 #### src
 The framework source code. Fonts, img, js, stylesheets get compiled and built out into a `dist/` folder that users and themers  recognize.
