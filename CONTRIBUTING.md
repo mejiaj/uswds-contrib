@@ -122,6 +122,15 @@ setup that might be worth importing.
 Most things related to testing. Our unit tests, visual regression screenshots,
 and accessibility testing, and our setup for a headless chrome instance live here.
 
+We're using golden screenshots for visual regression. We're running axe-core on
+a headless chrome instance to check for accessibility issues. Unit tests use mocha.
+
+You can run the test commands with
+
+```bash
+npm run test
+```
+
 > We should organize this.
 
 #### 📁 src
@@ -180,9 +189,10 @@ same branch naming conventions.
 ![](/images/uswds-pr.png)
 
 Try to add as much detail to your Pull Request as possible. If you've added or
-removed settings be sure to document those and why. Once your code passes CI tests
-and federalist generates a preview make sure to go back and update your PR with
-the relevant preview links so reviewers can see your changes.
+removed settings be sure to document those and why.
+
+Once your code passes CI tests and federalist generates a preview **go back**
+and update your PR with the relevant preview links so reviewers can see your changes.
 
 For example, this [Update banner settings ↗](https://github.com/uswds/uswds/pull/3520)
 PR is a good example of what kind of information to include.
@@ -191,16 +201,22 @@ If you're developing components this is a [great example ↗](https://github.com
 
 ### Create a draft PR
 
-Create a draft PR to let your peers be able to contribute and test features.
-You also get a preview link that will let less technical people view your work.
+Create a draft PR to let your peers contribute and test features.
+You also get a preview link that will let everyone on the team view your work live.
 
-Once your code successfully passes CI tests go back and update your original PR with a preview link.
+Again, update your original PR with a preview link.
 
 ## CI Process
 
 Tasks are defined in `.circleci` directory. When you commit and submit PR's to
 USWDS and USWDS-Site you'll see some checks are run. If they're all green then
 your PR should be good to review and merge. If not, you have to resolve the errors before.
+
+These checks run:
+- Accessibility tests
+- Code quality
+- Linting (JS/SCSS)
+- Dependency vulnerabilities
 
 ![](./images/uswds-checks.png)
 
@@ -225,16 +241,14 @@ to someone first.
 USWDS has a template for creating issues in USWDS & USWDS-Site. You can find
 that template [here ↗](https://github.com/uswds/uswds/blob/develop/.github/ISSUE_TEMPLATE.md).
 
-When creating issues it's important to
-
-⚠️ When you visit it you'll see it's using the old template workflow. Ideally we'd
-want to use the new workflow **and** have templates for things like Feature Requests and Bugs.
+> ⚠️ You'll see it's using the old template workflow. Ideally we'd
+> want to use the new workflow **and** have templates for things like Feature Requests and Bugs.
 
 Requirements:
-A good issue has needs to have good user requirements, assignees (if actionable),
+A good issue needs user requirements, assignees (if actionable),
 labels, assigned to the [sprint board ↗](https://github.com/orgs/uswds/projects/1)
 with an accurate status (in progress, review, etc). Related issues or linked pull
-requests. It's good to keep in mind that sometimes USWDS-Site will need to be
+requests. Keep in mind that sometimes USWDS-Site will need to be
 updated alongside your USWDS changes.
 
 [![](/images/uswds-issue-sidebar.png)](https://github.com/uswds/uswds/issues/3418)
@@ -273,9 +287,9 @@ It's important to try to follow the CARED framework for developing components.
 - **D** | Documented - [ ] Usability testing synthesis (ie what did you learn from research?) - [ ] Implementation guidance - [ ] Migration guidance - [ ] Usability guidance - [ ] References
 </details>
 
-The development lifecycle we've developed for Breadcrumb and Card have been like this:
-
 #### The process
+
+Below you'll find the development lifecycle we've followed for Breadcrumb and Card.
 
 ⚠️ Note: this isn't perfect and we should work towards improving this process.
 
@@ -297,7 +311,6 @@ The development lifecycle we've developed for Breadcrumb and Card have been like
 
 Add your research and landscape analysis to tickets. Generally we've added drafts
 of Component guidance (what eventually becomes the component page) on the wiki.
-
 You can view an example of that [here](https://github.com/uswds/uswds/wiki/Card-Landscape-Analysis).
 And it's related [issue](https://github.com/uswds/uswds/issues/3161).
 
@@ -396,7 +409,7 @@ _includes/code/components/newComponent.html // Will consume fractal component fr
 pages/ui-components/overview.md             // In a separate test repo measure the weight of your new component code and document here.
 ```
 
-Make sure first entry for `_data/variables.yml` has `section: true`.
+⚠️ Make sure your first entry for a new section in `_data/variables.yml` has `section: true`.
 
 Example:
 
