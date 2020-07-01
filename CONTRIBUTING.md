@@ -3,6 +3,34 @@
 What it's like to work with and contribute to the
 [USWDS](https://github.com/uswds/uswds) framework.
 
+## Table of Contents
+- [Contributing to USWDS](#contributing-to-uswds)
+  * [Repo's you should know](#repo-s-you-should-know)
+    + [Sprint board](#sprint-board)
+  * [The framework (USWDS)](#the-framework--uswds-)
+    + [File structure](#file-structure)
+      - [📁 config](#---config)
+      - [📁 docs](#---docs)
+      - [📁 examples](#---examples)
+      - [📁 spec](#---spec)
+      - [📁 src](#---src)
+        * [📁 data](#---data)
+        * [📁 components](#---components)
+  * [Git conventions](#git-conventions)
+    + [A PR is a blog post](#a-pr-is-a-blog-post)
+    + [Create a draft PR](#create-a-draft-pr)
+  * [CI Process](#ci-process)
+      - [circle-uswds](#circle-uswds)
+      - [federalist/build](#federalist-build)
+      - [security/snyk](#security-snyk)
+  * [Creating Issues](#creating-issues)
+  * [Developing Components](#developing-components)
+      - [The process](#the-process)
+      - [UX](#ux)
+      - [Starting development](#starting-development)
+      - [Update USWDS-Site](#update-uswds-site)
+  * [Releasing](#releasing)
+
 ## Repo's you should know
 
 When you visit the [USWDS organization](https://github.com/uswds) you'll find a bunch of repo's.
@@ -334,7 +362,7 @@ The workflow:
 When you're ready to merge in the component into develop you need to make sure
 you've done a few things.
 
-Make sure you update the original `add-component` PR with all of the appropriate
+Update the original `add-component` PR with all of the appropriate
 documentation. Good examples can be seen with [Card ↗](https://github.com/uswds/uswds/pull/3430) and [Breadcrumb ↗](https://github.com/uswds/uswds/pull/3488).
 
 > ℹ You'll see that a lot of the content in that PR is checked against the CARED
